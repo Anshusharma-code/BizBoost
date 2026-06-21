@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://bizboost-f6gu.onrender.com",
 });
 
 api.interceptors.request.use(
