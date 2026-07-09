@@ -19,11 +19,16 @@ from jose import jwt, JWTError
 from app.db.models import User
 
 
-SECRET_KEY = "bizboost-secret-key"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 
 oauth2_scheme = OAuth2PasswordBearer(
-    tokenUrl="api/auth/login"
+    tokenUrl="/api/auth/login"
 )
 
 
