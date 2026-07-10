@@ -10,6 +10,7 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Landing from "./pages/Landing/Landing";
+import History from "./pages/History/History";
 function App() {
   const token =
     localStorage.getItem("bizboost-token");
@@ -45,7 +46,10 @@ function App() {
   path="*"
   element={<Navigate to="/" />}
 />
-          
+     <Route
+  path="/history"
+  element={<History />}
+/>     
 
       </Routes>
     </BrowserRouter>
